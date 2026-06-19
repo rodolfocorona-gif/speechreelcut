@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed Contact Sheet — The Fastest Photo Culling App for Mac (Photo Mechanic & Narrative Alternative)</title>
+<meta name="description" content="Speed Contact Sheet is a macOS photo culling app for photographers who cull thousands of RAW files by hand. Rate with stars and colors at full speed using the keyboard or a game controller. Non-destructive XMP sidecars. A fast, focused alternative to Photo Mechanic and Narrative Select.">
+<meta name="keywords" content="photo culling app, fast photo culling Mac, Photo Mechanic alternative, Narrative Select alternative, RAW culling software, cull wedding photos fast, XMP sidecar rating app, game controller photo culling, macOS photo selection app, Corona Apps, Speed Contact Sheet">
+<link rel="canonical" href="https://luiscorona.com/speedcontactsheet/overview.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Speed Contact Sheet — The Fastest Photo Culling App for Mac">
+<meta property="og:description" content="Cull thousands of RAW photos by hand at full speed — keyboard or game controller. Non-destructive XMP sidecars. A focused alternative to Photo Mechanic and Narrative Select.">
+<meta property="og:url" content="https://luiscorona.com/speedcontactsheet/overview.html">
+<meta property="og:image" content="https://luiscorona.com/icon-speedcontactsheet.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --bg:#0e0d0b; --bg-soft:#161412; --card:#1c1916;
+    --gold:#d4a843; --gold-soft:#d4a84322; --text:#ece7df; --muted:#9a958c; --faint:#6b675f;
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 28px;}
+  a{color:var(--gold);text-decoration:none;}
+  /* Nav */
+  nav{position:sticky;top:0;z-index:10;background:#0e0d0bd9;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff0d;}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;}
+  .logo{font-weight:600;font-size:15px;letter-spacing:.02em;color:var(--text);}
+  .logo span{color:var(--gold);}
+  nav .links a{color:var(--muted);font-size:13.5px;margin-left:22px;transition:color .2s;}
+  nav .links a:hover,nav .links a.active{color:var(--gold);}
+  /* Hero */
+  header{padding:70px 0 50px;border-bottom:1px solid #ffffff0a;text-align:center;}
+  header .icon{width:84px;height:84px;border-radius:19px;border:1px solid #d4a84333;box-shadow:0 10px 30px #00000060;}
+  .kicker{color:var(--gold);font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin:16px 0 10px;}
+  h1{font-size:clamp(26px,3.6vw,38px);font-weight:700;letter-spacing:-.02em;line-height:1.18;max-width:760px;margin:0 auto 18px;}
+  .lead{font-size:17px;color:var(--muted);max-width:660px;margin:0 auto;}
+  .badges{margin-top:20px;}
+  .badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--gold);background:var(--gold-soft);border:1px solid #d4a84333;border-radius:99px;padding:4px 13px;margin:4px;}
+  .cta{display:inline-block;background:var(--gold);color:#14110a;font-weight:600;font-size:14.5px;
+    padding:12px 26px;border-radius:10px;margin:18px 8px 0;transition:opacity .2s;}
+  .cta.ghost{background:transparent;color:var(--gold);border:1px solid #d4a84355;}
+  .cta:hover{opacity:.85;}
+  /* Sections */
+  section{padding:54px 0;border-top:1px solid #ffffff0a;}
+  h2{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;}
+  h3{font-size:16px;font-weight:650;margin:18px 0 4px;color:var(--text);}
+  p{color:var(--muted);margin-bottom:14px;max-width:760px;}
+  ul{color:var(--muted);margin:0 0 14px 20px;}li{margin-bottom:8px;}
+  strong{color:var(--text);font-weight:600;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .feat{background:linear-gradient(135deg,var(--card),var(--bg-soft));border:1px solid #ffffff12;border-radius:16px;padding:20px 22px;}
+  .feat h3{margin-top:0;}.feat p{margin:0;font-size:14.5px;}
+  table{width:100%;border-collapse:collapse;margin:6px 0 12px;font-size:14.5px;}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid #ffffff12;vertical-align:top;color:var(--muted);}
+  th{color:var(--gold);font-weight:600;}td:first-child,th:first-child{color:var(--text);font-weight:600;width:30%;}
+  kbd{background:#000;border:1px solid #ffffff1f;border-radius:6px;padding:1px 7px;font-size:13px;color:var(--gold);}
+  .note{color:var(--faint);font-size:12.5px;}
+  .faq h3{margin-top:20px;}
+  footer{border-top:1px solid #ffffff0a;padding:32px 0 46px;color:var(--faint);font-size:12.5px;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  footer a{color:var(--faint);}footer a:hover{color:var(--gold);}
+  @media(max-width:760px){.grid{grid-template-columns:1fr;}nav .links a{margin-left:13px;font-size:12px;}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"SoftwareApplication",
+  "name":"Speed Contact Sheet","applicationCategory":"MultimediaApplication",
+  "applicationSubCategory":"Photo Culling & Selection","operatingSystem":"macOS","softwareVersion":"1.0",
+  "releaseNotes":"Initial release. Coming soon to the Mac App Store. An iPad version is in development, followed by iPhone.",
+  "description":"Speed Contact Sheet is a macOS photo culling application for photographers who select thousands of images by hand. It lets you rate photos with stars and color labels at full speed using the keyboard or a game controller, while every decision is written to standard XMP sidecar files. Your original photos are never moved or modified. It is a fast, focused alternative to Photo Mechanic and Narrative Select for the culling stage of a professional photo workflow.",
+  "featureList":["Star ratings (1-5) and color labels at full speed","Keyboard-driven culling with single-key shortcuts","Game controller support (Xbox, PlayStation, MFi) over Bluetooth or USB","Non-destructive XMP sidecar files compatible with Lightroom, Capture One and Bridge","RAW support: CR3, CR2, ARW, NEF, ORF, RW2, DNG and more","JPEG, HEIC, PNG and TIFF support with automatic RAW+JPG pairing","Built-in Pomodoro focus timer for long culling sessions","Histogram and full EXIF metadata panel","Multiple folder tabs and recursive folder sessions","Zoom, fullscreen preview and auto-advance"],
+  "creator":{"@type":"Organization","name":"Corona Apps","founder":{"@type":"Person","name":"Luis Corona"},"url":"https://luiscorona.com","email":"hello.coronaapps@gmail.com"},
+  "url":"https://luiscorona.com/speedcontactsheet/overview.html","image":"https://luiscorona.com/icon-speedcontactsheet.png",
+  "softwareHelp":"https://luiscorona.com/speedcontactsheet/support.html","privacyPolicy":"https://luiscorona.com/speedcontactsheet/privacy.html",
+  "offers":[
+    {"@type":"Offer","price":"4.99","priceCurrency":"USD","description":"Monthly subscription with a free trial."},
+    {"@type":"Offer","price":"39.00","priceCurrency":"USD","description":"Annual subscription (best value) with a free trial — about half the price of comparable culling subscriptions."}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What is Speed Contact Sheet?","acceptedAnswer":{"@type":"Answer","text":"Speed Contact Sheet is a macOS app for fast, manual photo culling. Photographers use it to review thousands of RAW or JPEG images and rate them with stars and color labels at high speed, using the keyboard or a game controller. Ratings are saved to standard XMP sidecar files and your original photos are never moved or modified."}},
+    {"@type":"Question","name":"Is Speed Contact Sheet a good alternative to Photo Mechanic?","acceptedAnswer":{"@type":"Answer","text":"Yes. Like Photo Mechanic, Speed Contact Sheet focuses on the culling stage rather than editing, keeps the photographer in full control, and writes ratings to standard XMP metadata. It adds game controller support and a built-in Pomodoro focus timer, and is designed for macOS."}},
+    {"@type":"Question","name":"How is it different from Narrative Select?","acceptedAnswer":{"@type":"Answer","text":"Narrative Select leans on AI to suggest selects. Speed Contact Sheet is human-driven culling: the photographer makes every call, the app just makes those calls as fast as possible through keyboard and game-controller input. There is no AI guessing and nothing is uploaded."}},
+    {"@type":"Question","name":"Does Speed Contact Sheet modify or move my original photos?","acceptedAnswer":{"@type":"Answer","text":"No. It never moves or modifies your photos. Star ratings and color labels are written to standard XMP sidecar files that work with professional photo workflows such as Adobe Lightroom, Capture One and Adobe Bridge."}},
+    {"@type":"Question","name":"Which file formats does it support?","acceptedAnswer":{"@type":"Answer","text":"RAW formats including CR3, CR2, ARW, NEF, ORF, RW2 and DNG, plus JPEG, HEIC, PNG and TIFF, with automatic RAW+JPG pairing."}},
+    {"@type":"Question","name":"Can I cull photos with a game controller?","acceptedAnswer":{"@type":"Answer","text":"Yes. Speed Contact Sheet supports Xbox, PlayStation and MFi controllers over Bluetooth or USB, with configurable button mapping for navigating, rating and opening the preview."}},
+    {"@type":"Question","name":"What platforms is it available on?","acceptedAnswer":{"@type":"Answer","text":"Speed Contact Sheet is a macOS app, coming soon to the Mac App Store. An iPad version is in development, with an iPhone version planned after that."}},
+    {"@type":"Question","name":"How much does Speed Contact Sheet cost?","acceptedAnswer":{"@type":"Answer","text":"Speed Contact Sheet is a subscription priced at $4.99 per month or $39 per year, with a free trial. That is roughly half the price of comparable culling subscriptions such as Narrative. It focuses on the essentials a photographer actually needs for fast culling rather than advanced AI features."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="../index.html">Luis <span>Corona</span></a>
+    <div class="links">
+      <a href="overview.html" class="active">Overview</a>
+      <a href="compare.html">Compare</a>
+      <a href="support.html">Support</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <img class="icon" src="../icon-speedcontactsheet.png" alt="Speed Contact Sheet app icon">
+    <p class="kicker">By Corona Apps · macOS</p>
+    <h1>The fastest way to cull thousands of photos</h1>
+    <p class="lead">A focused macOS culling app for photographers who select by hand. Rate with stars and colors at full speed — keyboard or even a game controller — while everything saves to standard XMP sidecar files. Your originals are never moved or modified.</p>
+    <div class="badges">
+      <span class="badge">Coming soon to the Mac App Store</span>
+      <span class="badge">$4.99/mo · $39/yr · free trial</span>
+      <span class="badge">iPad version in development</span>
+    </div>
+    <div>
+      <a class="cta" href="compare.html">See how it compares</a>
+      <a class="cta ghost" href="support.html">Support &amp; FAQ</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section><div class="wrap">
+  <h2>What is Speed Contact Sheet?</h2>
+  <p><strong>Speed Contact Sheet is a macOS photo culling app</strong> built for photographers who shoot in volume — weddings, events, portraits, sports — and need to get from thousands of frames to a clean selection as quickly as possible. It is a dedicated <em>culling</em> tool, not an editor: its only job is to help you decide which photos to keep, reject or flag, and to do that faster than anything else in your workflow.</p>
+  <p>Every rating is written to a <strong>standard XMP sidecar file</strong>, so your selections flow straight into Adobe Lightroom, Capture One or Adobe Bridge. The app <strong>never moves or modifies your original photos.</strong></p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Who is it for?</h2>
+  <ul>
+    <li><strong>Wedding and event photographers</strong> facing 2,000–10,000 frames per job.</li>
+    <li><strong>Portrait, fashion and product shooters</strong> who burst and need to pick the sharpest frame fast.</li>
+    <li><strong>Anyone who finds Lightroom too slow for the first culling pass</strong> and wants a tool dedicated to selection.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Key features</h2>
+  <div class="grid">
+    <div class="feat"><h3>Full-speed rating</h3><p>Stars (1–5) and color labels with single-key shortcuts. Cull at the speed of thought.</p></div>
+    <div class="feat"><h3>Game controller support</h3><p>Cull with an Xbox, PlayStation or MFi controller over Bluetooth or USB. Map navigation and ratings to buttons.</p></div>
+    <div class="feat"><h3>Non-destructive XMP</h3><p>Ratings saved as standard XMP sidecars. Files are never moved or modified. Works with Lightroom, Capture One, Bridge.</p></div>
+    <div class="feat"><h3>Full RAW support</h3><p>CR3, CR2, ARW, NEF, ORF, RW2, DNG and more — plus JPEG, HEIC, PNG, TIFF and automatic RAW+JPG pairing.</p></div>
+    <div class="feat"><h3>Built-in Pomodoro timer</h3><p>A focus timer designed for long culling sessions, so a 10,000-photo job stays manageable.</p></div>
+    <div class="feat"><h3>Histogram &amp; metadata</h3><p>Live histogram and a full EXIF panel: camera, mode, white balance, shutter, aperture, ISO, lens and focal length.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Keyboard shortcuts</h2>
+  <table>
+    <tr><th>Key</th><th>Action</th></tr>
+    <tr><td><kbd>1</kbd>–<kbd>5</kbd></td><td>Rate with 1 to 5 stars</td></tr>
+    <tr><td><kbd>0</kbd></td><td>Clear rating</td></tr>
+    <tr><td><kbd>6</kbd>–<kbd>9</kbd></td><td>Apply color labels</td></tr>
+    <tr><td><kbd>T</kbd> / <kbd>P</kbd></td><td>Tag photo</td></tr>
+    <tr><td>Arrows</td><td>Navigate between photos</td></tr>
+    <tr><td><kbd>Space</kbd></td><td>Open / close full preview</td></tr>
+    <tr><td><kbd>Z</kbd></td><td>Zoom</td></tr>
+    <tr><td><kbd>I</kbd></td><td>Toggle info panel</td></tr>
+    <tr><td>Caps Lock</td><td>Auto-advance after rating</td></tr>
+  </table>
+</div></section>
+
+<section><div class="wrap">
+  <h2>How it compares</h2>
+  <p>Speed Contact Sheet sits in the same category as Photo Mechanic and Narrative Select — dedicated culling tools that sit <em>before</em> editing. Here is how it differs:</p>
+  <table>
+    <tr><th>&nbsp;</th><th>Speed Contact Sheet</th><th>Photo Mechanic</th><th>Narrative Select</th></tr>
+    <tr><td>Core approach</td><td>Manual, full speed</td><td>Manual culling &amp; ingest</td><td>AI-assisted</td></tr>
+    <tr><td>Rating input</td><td>Keyboard <strong>+ game controller</strong></td><td>Keyboard / mouse</td><td>Keyboard / mouse</td></tr>
+    <tr><td>Game controller</td><td>Yes</td><td>No</td><td>No</td></tr>
+    <tr><td>Pomodoro focus timer</td><td>Yes</td><td>No</td><td>No</td></tr>
+    <tr><td>Standard XMP sidecars</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Touches your originals</td><td>Never</td><td>Never</td><td>Never</td></tr>
+    <tr><td>Built natively for</td><td>macOS (Apple-native)</td><td>macOS &amp; Windows</td><td>macOS &amp; Windows</td></tr>
+    <tr><td>Roadmap</td><td>iPad &amp; iPhone coming soon</td><td>—</td><td>—</td></tr>
+    <tr><td>Price</td><td><strong>$4.99/mo · $39/yr</strong> (free trial)</td><td>Paid license</td><td>From $10/mo (culling)</td></tr>
+  </table>
+  <p class="note">Comparison based on publicly available information about each product as of June 2026; features and pricing change over time — verify with each vendor. "Photo Mechanic" and "Narrative" are trademarks of their respective owners, referenced here for identification and comparison only. <a href="compare.html">Full comparison →</a></p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Why photographers choose it</h2>
+  <ul>
+    <li><strong>You decide, not an algorithm.</strong> Culling is fully human-driven — no AI guessing which shot you love, nothing uploaded.</li>
+    <li><strong>Cull from the couch with a game controller.</strong> Rate thousands of frames without hunching over a keyboard — a workflow no mainstream culler offers.</li>
+    <li><strong>A focus timer built for the grind.</strong> The built-in Pomodoro timer turns a punishing 8,000-photo cull into structured sprints.</li>
+    <li><strong>Truly non-destructive.</strong> Ratings live in standard XMP sidecars and flow into Lightroom, Capture One and Bridge. Originals never touched.</li>
+    <li><strong>Apple-native and fast.</strong> Built for macOS, with the same selections coming to iPad and iPhone so your cull travels with you.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Pricing — half the price, just the essentials</h2>
+  <p><strong>$4.99 / month or $39 / year, with a free trial.</strong> That is roughly half the price of comparable culling subscriptions like Narrative. Speed Contact Sheet does not try to match every advanced AI feature — most photographers do not need them. Instead it does the one job they do every shoot, faster and cheaper: get from thousands of frames to a clean selection.</p>
+  <p>You pay for fast, reliable, non-destructive culling — not for AI you will not use. Your ratings live in standard XMP sidecars, so you are never locked in.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Coming soon &amp; roadmap</h2>
+  <p><strong>Speed Contact Sheet is coming soon to the Mac App Store</strong> (version 1.0). Next on the roadmap: an <strong>iPad version</strong> currently in development, followed by <strong>iPhone</strong> — so the same fast, controller-friendly culling works across your Apple devices. Want to know when it ships? Email <a href="mailto:hello.coronaapps@gmail.com">hello.coronaapps@gmail.com</a>.</p>
+</div></section>
+
+<section class="faq"><div class="wrap">
+  <h2>Frequently asked questions</h2>
+  <h3>Is Speed Contact Sheet a good Photo Mechanic alternative?</h3>
+  <p>Yes. It targets the same culling stage, keeps you in full control, and writes standard XMP metadata — while adding game-controller input and a built-in Pomodoro focus timer on macOS.</p>
+  <h3>How is it different from Narrative Select?</h3>
+  <p>Narrative Select uses AI to suggest selects. Speed Contact Sheet is fully human-driven: you make every call, and nothing is uploaded or analyzed by AI.</p>
+  <h3>Will it change my original files?</h3>
+  <p>No. Originals are never moved or modified. Ratings and color labels live in standard XMP sidecar files.</p>
+  <h3>What formats are supported?</h3>
+  <p>RAW (CR3, CR2, ARW, NEF, ORF, RW2, DNG and more), JPEG, HEIC, PNG and TIFF, with automatic RAW+JPG pairing.</p>
+  <h3>Where can I get it?</h3>
+  <p>It is coming soon to the Mac App Store. An iPad version is in development, with iPhone planned next. See <a href="../index.html">luiscorona.com</a>.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>About the maker</h2>
+  <p>Speed Contact Sheet is made by <strong>Corona Apps</strong>, the independent studio of <strong>Luis Corona</strong> — a wedding filmmaker who spent over a decade editing real emotion frame by frame and now builds focused macOS tools for visual storytellers. Questions, bugs or feature ideas: <a href="mailto:hello.coronaapps@gmail.com">hello.coronaapps@gmail.com</a> — every email is answered personally.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Luis Corona — Corona Apps</span>
+  <span><a href="../index.html">Home</a> · <a href="compare.html">Compare</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></span>
+</div></footer>
+
+</body>
+</html>

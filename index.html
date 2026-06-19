@@ -3,38 +3,277 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Speech Reelcut — Corona Apps</title>
+<title>Luis Corona — Storyteller & App Developer</title>
+<meta name="description" content="Luis Corona — wedding filmmaker and macOS app developer. Creator of Speech Reelcut and founder of Corona Apps.">
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-         max-width: 680px; margin: 0 auto; padding: 48px 24px; line-height: 1.6; }
-  h1 { font-size: 1.8em; margin-bottom: 0.2em; }
-  .tagline { color: #888; margin-top: 0; }
-  a { color: #d4a843; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .links { margin-top: 2em; }
-  .links a { display: inline-block; margin-right: 24px; }
-  footer { margin-top: 4em; font-size: 0.85em; color: #888; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg:        #0e0d0b;
+    --bg-soft:   #161412;
+    --card:      #1c1916;
+    --gold:      #d4a843;
+    --gold-soft: #d4a84322;
+    --text:      #ece7df;
+    --muted:     #9a958c;
+    --faint:     #6b675f;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+
+  /* ── Nav ─────────────────────────────────── */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: #0e0d0bd9; backdrop-filter: blur(12px);
+    border-bottom: 1px solid #ffffff0d;
+  }
+  nav .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .logo { font-weight: 600; font-size: 15px; letter-spacing: 0.02em; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--gold); }
+  nav .links a {
+    color: var(--muted); text-decoration: none; font-size: 13.5px;
+    margin-left: 26px; transition: color .2s;
+  }
+  nav .links a:hover { color: var(--gold); }
+
+  /* ── Hero ────────────────────────────────── */
+  header { padding: 90px 0 80px; }
+  .hero {
+    display: grid; grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px; align-items: center;
+  }
+  .kicker {
+    color: var(--gold); font-size: 12.5px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px;
+  }
+  h1 {
+    font-size: clamp(30px, 4.6vw, 46px); font-weight: 700;
+    letter-spacing: -0.02em; line-height: 1.14; margin-bottom: 22px;
+  }
+  h1 em { font-style: normal; color: var(--gold); }
+  .lead { font-size: 17px; color: var(--muted); max-width: 540px; }
+
+  .portrait {
+    position: relative; border-radius: 20px; overflow: hidden;
+    border: 1px solid #ffffff14;
+    box-shadow: 0 30px 80px #00000080;
+  }
+  .portrait img { display: block; width: 100%; height: auto; filter: grayscale(1); }
+  .portrait::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, #0e0d0bcc 100%);
+    pointer-events: none;
+  }
+  .portrait .caption {
+    position: absolute; bottom: 14px; left: 18px; z-index: 2;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── Sections ────────────────────────────── */
+  section { padding: 76px 0; border-top: 1px solid #ffffff0a; }
+  h2 {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 34px;
+  }
+
+  /* About */
+  .about-grid {
+    display: grid; grid-template-columns: 0.7fr 1.3fr;
+    gap: 56px; align-items: center;
+  }
+  .about-photo {
+    border-radius: 18px; overflow: hidden;
+    border: 1px solid #ffffff12;
+    box-shadow: 0 24px 60px #00000070;
+  }
+  .about-photo img { display: block; width: 100%; height: auto; filter: grayscale(1); }
+  .about p { color: var(--muted); font-size: 16px; margin-bottom: 16px; }
+  .about strong { color: var(--text); font-weight: 600; }
+
+  /* App card */
+  .app-card {
+    background: linear-gradient(135deg, var(--card), var(--bg-soft));
+    border: 1px solid #ffffff12; border-radius: 18px;
+    padding: 38px; display: flex; gap: 30px; align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .app-icon {
+    width: 84px; height: 84px; border-radius: 19px; flex-shrink: 0;
+    overflow: hidden; border: 1px solid #d4a84333;
+    box-shadow: 0 10px 30px #00000060;
+  }
+  .app-icon img { width: 100%; height: 100%; display: block; }
+  .app-card + .app-card { margin-top: 22px; }
+  .app-body { flex: 1; min-width: 260px; }
+  .app-body h3 { font-size: 22px; font-weight: 650; margin-bottom: 4px; }
+  .badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gold); background: var(--gold-soft);
+    border: 1px solid #d4a84333; border-radius: 99px;
+    padding: 3px 12px; margin-bottom: 14px;
+  }
+  .app-body p { color: var(--muted); font-size: 15px; margin-bottom: 18px; max-width: 520px; }
+  .app-links a {
+    color: var(--gold); text-decoration: none; font-size: 13.5px; font-weight: 500;
+    margin-right: 22px;
+  }
+  .app-links a:hover { text-decoration: underline; }
+
+  .soon-note { color: var(--faint); font-size: 13px; margin-top: 26px; }
+
+  /* Contact */
+  .contact p { color: var(--muted); font-size: 16px; max-width: 560px; margin-bottom: 26px; }
+  .btn {
+    display: inline-block; background: var(--gold); color: #14110a;
+    font-weight: 600; font-size: 14.5px; text-decoration: none;
+    padding: 13px 30px; border-radius: 10px; transition: opacity .2s;
+  }
+  .btn:hover { opacity: 0.85; }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid #ffffff0a; padding: 36px 0 48px;
+    color: var(--faint); font-size: 12.5px;
+  }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--faint); text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+  .mascot { image-rendering: pixelated; image-rendering: crisp-edges; width: 78px; height: auto; opacity: 0.95; }
+
+  @media (max-width: 760px) {
+    header { padding: 56px 0 50px; }
+    .hero { grid-template-columns: 1fr; gap: 36px; }
+    .portrait { max-width: 420px; }
+    .about-grid { grid-template-columns: 1fr; gap: 36px; }
+    .about-photo { max-width: 380px; }
+    .app-card { padding: 28px; }
+    nav .links a { margin-left: 16px; font-size: 12.5px; }
+  }
 </style>
 </head>
 <body>
-  <h1>Speech Reelcut</h1>
-  <p class="tagline">Turn any long recording into a short, powerful story.<br>
-  Convierte cualquier grabación larga en una historia breve y poderosa.</p>
 
-  <p>Speech Reelcut is a macOS app that turns long recordings — speeches,
-  podcasts, interviews, voice messages, or video memories — into short,
-  ready-to-edit clips for reels, highlights, and audio summaries.</p>
-
-  <p>Speech Reelcut es una app para macOS que convierte grabaciones largas —
-  discursos, podcasts, entrevistas, mensajes de voz o video-memorias — en
-  clips listos para editar para reels, resúmenes y momentos destacados.</p>
-
-  <div class="links">
-    <a href="privacy.html">Privacy Policy / Política de privacidad</a>
-    <a href="support.html">Support / Soporte</a>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">Luis <span>Corona</span></a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#apps">Apps</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
+</nav>
 
-  <footer>© 2026 Luis Corona — Corona Apps</footer>
+<header>
+  <div class="wrap hero">
+    <div>
+      <p class="kicker">Storyteller · App Developer</p>
+      <h1>I tell stories with cameras.<br>Now I build the <em>tools</em> that cut them.</h1>
+      <p class="lead">I'm Luis Corona — a wedding filmmaker who spent years editing
+      real emotion frame by frame, and now designs macOS apps that make that
+      craft faster for everyone. Under the name <strong style="color:var(--text)">Corona Apps</strong>.</p>
+    </div>
+    <div class="portrait">
+      <img src="retrato-1.jpg" alt="Luis Corona — portrait">
+      <span class="caption">Luis Corona</span>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="retrato-2.jpg" alt="Luis Corona">
+    </div>
+    <div>
+      <h2>About</h2>
+      <p>For over a decade I've filmed weddings and edited hundreds of hours of
+      vows, speeches, and toasts — learning exactly where a story lives inside a
+      long recording.</p>
+      <p>That experience became <strong>Corona Apps</strong>: a small independent
+      studio building focused macOS tools for creators who work with real voices —
+      filmmakers, podcasters, and anyone who needs to find the moment that matters.</p>
+      <p>Every app is designed around one belief: <strong>the story is already in
+      the recording — you just need a faster way to cut it out.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="apps">
+  <div class="wrap">
+    <h2>Apps</h2>
+    <div class="app-card">
+      <div class="app-icon"><img src="icon-speechreelcut.png" alt="Speech Reelcut app icon"></div>
+      <div class="app-body">
+        <h3>Speech Reelcut</h3>
+        <span class="badge">Coming soon to the Mac App Store</span>
+        <p>Turn any long recording into a short, powerful story. Load your audio
+        and transcript — speeches, podcasts, interviews, voice messages — pick
+        the best moments by reading instead of scrubbing, and export
+        ready-to-edit clips for reels, highlights, and audio summaries.</p>
+        <div class="app-links">
+          <a href="https://rodolfocorona-gif.github.io/speechreelcut/">Website</a>
+          <a href="https://rodolfocorona-gif.github.io/speechreelcut/privacy.html">Privacy</a>
+          <a href="https://rodolfocorona-gif.github.io/speechreelcut/support.html">Support</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon"><img src="icon-speedcontactsheet.png" alt="Speed Contact Sheet app icon"></div>
+      <div class="app-body">
+        <h3>Speed Contact Sheet</h3>
+        <span class="badge">Coming soon to the Mac App Store</span>
+        <p>The fastest way to cull thousands of photos. Rate with stars and
+        colors at full speed — keyboard or even a game controller — while
+        everything saves to standard XMP sidecar files that work with
+        professional photo workflows. Your files are never moved or modified.
+        <strong style="color:var(--text)">$4.99/mo or $39/yr</strong> with a free trial —
+        about half the price of comparable culling apps.</p>
+        <div class="app-links">
+          <a href="speedcontactsheet/overview.html">Overview</a>
+          <a href="speedcontactsheet/compare.html">Compare</a>
+          <a href="speedcontactsheet/privacy.html">Privacy</a>
+          <a href="speedcontactsheet/support.html">Support</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="soon-note">More tools for visual storytellers are in development.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>Questions about an app, a feature idea, or a collaboration?
+    I answer every email personally.</p>
+    <a class="btn" href="mailto:hello.coronaapps@gmail.com">hello.coronaapps@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="flex-direction:column;align-items:center;text-align:center;gap:16px;">
+    <img class="mascot" src="vaquerito.png" alt="Corona Apps mascot — a pixel-art Border Collie" width="78" height="78">
+    <span>© 2026 Luis Corona — Corona Apps</span>
+    <span><a href="#about">About</a> · <a href="#apps">Apps</a> · <a href="#contact">Contact</a></span>
+  </div>
+</footer>
+
 </body>
 </html>
